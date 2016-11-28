@@ -1,0 +1,85 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragment.MineFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100sp">
+
+            <until.RoundImageView
+                android:id="@+id/avatar_mine_user"
+                android:layout_gravity="left"
+                android:layout_width="70sp"
+                android:layout_margin="10sp"
+                android:layout_height="70sp" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100sp">
+
+                <TextView
+                    android:id="@+id/name_mine_user"
+                    android:textSize="20sp"
+                    android:layout_margin="10sp"
+                    android:text="手掌心"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_margin="10sp"
+                    android:id="@+id/great_mine_user"
+                    android:textSize="12sp"
+                    android:text="被赞数 0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_mine_user"
+                    android:layout_alignRight="@+id/name_mine_user"
+                    android:layout_alignEnd="@+id/name_mine_user" />
+
+                <TextView
+                    android:layout_margin="10sp"
+                    android:id="@+id/follow_mine_user"
+                    android:textSize="12sp"
+                    android:text="关注数 0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/great_mine_user"
+                    android:layout_alignBottom="@+id/great_mine_user"
+                    android:layout_toRightOf="@+id/great_mine_user"
+                    android:layout_toEndOf="@+id/great_mine_user" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="70sp"
+                android:id="@+id/userinfo_mine_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="29dp">
+
+            <ImageView
+                android:layout_margin="2sp"
+                android:layout_width="30sp"
+                android:layout_height="30sp" />
+
+            <TextView
+                android:text="我的发布"
+                android:padding="1sp"
+                android:textSize="20sp"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

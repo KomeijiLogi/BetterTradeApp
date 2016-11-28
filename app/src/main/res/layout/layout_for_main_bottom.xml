@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10sp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<FrameLayout-->
+        <!--android:id="@+id/realtabcontent"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="0dip"-->
+        <!--android:layout_weight="1" />-->
+
+    <!--<android.support.v4.app.FragmentTabHost-->
+        <!--android:id="@android:id/tabhost"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<FrameLayout-->
+            <!--android:id="@android:id/tabcontent"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="0" />-->
+    <!--</android.support.v4.app.FragmentTabHost>-->
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RadioGroup
+            android:id="@+id/rg_img_bottom"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/main_on"
+            android:id="@+id/imgbt_main"
+            android:button="@null"
+            android:layout_margin="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+            <RadioButton
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/dynamic_off"
+            android:id="@+id/imgbt_dynamic"
+            android:button="@null"
+            android:layout_margin="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+            <RadioButton
+
+            android:background="@drawable/addon"
+            android:id="@+id/imgbt_addon"
+            android:button="@null"
+            android:layout_width="50sp"
+            android:layout_height="50sp" />
+
+            <RadioButton
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/message_off"
+            android:id="@+id/imgbt_message"
+            android:button="@null"
+            android:layout_margin="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+            <RadioButton
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/mine_off"
+            android:id="@+id/imgbt_mine"
+            android:button="@null"
+            android:layout_margin="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </RadioGroup>
+        <!--<ImageButton-->
+            <!--android:src="@drawable/main"-->
+            <!--android:id="@+id/imgbt_main"-->
+            <!--android:layout_margin="8sp"-->
+            <!--android:layout_width="50sp"-->
+            <!--android:layout_height="70sp" />-->
+
+        <!--<ImageButton-->
+            <!--android:src="@drawable/dynamic"-->
+            <!--android:id="@+id/imgbt_dynamic"-->
+            <!--android:layout_margin="8sp"-->
+            <!--android:layout_width="50sp"-->
+            <!--android:layout_height="70sp" />-->
+
+        <!--<ImageButton-->
+            <!--android:src="@drawable/addon"-->
+            <!--android:id="@+id/imgbt_addon"-->
+            <!--android:layout_margin="8sp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<ImageButton-->
+            <!--android:src="@drawable/message"-->
+            <!--android:id="@+id/imgbt_message"-->
+            <!--android:layout_margin="8sp"-->
+            <!--android:layout_width="50sp"-->
+            <!--android:layout_height="70sp" />-->
+
+        <!--<ImageButton-->
+            <!--android:src="@drawable/mine"-->
+            <!--android:id="@+id/imgbt_mine"-->
+            <!--android:layout_margin="8sp"-->
+            <!--android:layout_width="50sp"-->
+            <!--android:layout_height="70sp" />-->
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ll_inclue_title"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:weightSum="1">
+
+        <ImageButton
+            android:src="@drawable/ewscan"
+            android:id="@+id/img_secw"
+            android:layout_weight="0.2"
+            android:layout_width="40sp"
+            android:layout_height="40sp" />
+
+        <EditText
+            android:hint="请输入查找内容："
+            android:id="@+id/edit_search"
+            android:layout_weight="0.6"
+            android:layout_width="300sp"
+            android:layout_height="40sp"
+             />
+        <ImageButton
+            android:src="@drawable/itemlist"
+            android:id="@+id/settings_title"
+            android:layout_weight="0.2"
+            android:layout_width="40sp"
+            android:layout_height="40sp" />
+    </LinearLayout>
+</LinearLayout>
