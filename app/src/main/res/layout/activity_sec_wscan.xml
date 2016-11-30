@@ -13,7 +13,7 @@
         android:layout_alignTop="@+id/btn_hint1"
         />
     <!-- 这个控件就是扫描的窗口了 -->
-    <com.journeyapps.barcodescanner.BarcodeView
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/dbv_custom"
@@ -23,6 +23,6 @@
         app:zxing_use_texture_view="true"
         app:zxing_scanner_layout="@layout/barcode_scanner"
         >
-    </com.journeyapps.barcodescanner.BarcodeView>
+    </com.journeyapps.barcodescanner.DecoratedBarcodeView>
 
 </LinearLayout>

@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.nostra13.universalimageloader.utils.L;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     MineFragment mineFragment;
 
     FragmentManager fm;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,15 +71,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ragp_bottom= (RadioGroup) findViewById(R.id.rg_img_bottom);
         viewPager= (ViewPager) findViewById(R.id.viewpager_main);
 
-        View v=LayoutInflater.from(this).inflate(R.layout.layout_for_main_title,null);
-        img_bt_ewscan= (ImageButton) v.findViewById(R.id.img_secw);
-        img_bt_itemlist= (ImageButton) v.findViewById(R.id.settings_title);
 
-        if(img_bt_ewscan==null){
-            Log.d("TAG","imgbt_ewscan_null");
-        }else {
-            Log.d("TAG","imgbt_ewscan_notnull");
-        }
+//        View v=LayoutInflater.from(this).inflate(R.layout.layout_for_main_title,null);
+//        img_bt_ewscan= (ImageButton) v.findViewById(R.id.img_secw);
+//        img_bt_itemlist= (ImageButton) v.findViewById(R.id.settings_title);
+
+        img_bt_ewscan= (ImageButton) findViewById(R.id.img_secw);
+        img_bt_itemlist= (ImageButton) findViewById(R.id.settings_title);
 
         img_bt_mainpage.setChecked(true);
 
@@ -137,6 +137,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bindevent();
 
         tabDataPaperAdapter.notifyDataSetChanged();
+
+        img_bt_ewscan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               IntentIntegrator intentIntegrator = new IntentIntegrator(MainActivity.this);
+               intentIntegrator
+                        .setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES)
+                        .setPrompt("将二维码/条码放入框内，即可自动扫描")//写那句提示的话
+                        .setOrientationLocked(false)//扫描方向固定
+                        .setCaptureActivity(SecWScan.class) // 设置自定义的activity是CustomActivity
+                        .initiateScan(); // 初始化扫描
+
+            }
+        });
         
     }
     private void showMoreWindow(View view) {
@@ -218,7 +232,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 viewPager.setCurrentItem(3);
                 break;
             case R.id.img_secw:
-                Log.d("Tag","点击扫描按钮");
+
+
 //                IntentIntegrator intentIntegrator = new IntentIntegrator(MainActivity.this);
 //                intentIntegrator
 //                        .setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES)
@@ -226,6 +241,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                        .setOrientationLocked(false)//扫描方向固定
 //                        .setCaptureActivity(SecWScan.class) // 设置自定义的activity是CustomActivity
 //                        .initiateScan(); // 初始化扫描
+
+
 
 
                 break;
