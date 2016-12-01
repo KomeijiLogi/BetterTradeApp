@@ -42,6 +42,7 @@ public class MainFragment extends Fragment {
         img_bt_ewscan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 IntentIntegrator intentIntegrator = new IntentIntegrator(getActivity());
                 intentIntegrator
                         .setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES)
