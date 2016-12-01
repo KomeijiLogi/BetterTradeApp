@@ -64,6 +64,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:layout_marginTop="5sp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="29dp">
@@ -75,6 +76,132 @@
 
             <TextView
                 android:text="我的发布"
+                android:padding="1sp"
+                android:textSize="20sp"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="29dp">
+
+            <ImageView
+                android:layout_margin="2sp"
+                android:layout_width="30sp"
+                android:layout_height="30sp" />
+
+            <TextView
+                android:text="我的卖出"
+                android:padding="1sp"
+                android:textSize="20sp"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="29dp">
+
+            <ImageView
+                android:layout_margin="2sp"
+                android:layout_width="30sp"
+                android:layout_height="30sp" />
+
+            <TextView
+                android:text="我的买入"
+                android:padding="1sp"
+                android:textSize="20sp"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="29dp">
+
+            <ImageView
+                android:layout_margin="2sp"
+                android:layout_width="30sp"
+                android:layout_height="30sp" />
+
+            <TextView
+                android:text="我的换物"
+                android:padding="1sp"
+                android:textSize="20sp"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="29dp">
+
+            <ImageView
+                android:layout_margin="2sp"
+                android:layout_width="30sp"
+                android:layout_height="30sp" />
+
+            <TextView
+                android:text="我的拍卖"
+                android:padding="1sp"
+                android:textSize="20sp"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="29dp">
+
+            <ImageView
+                android:layout_margin="2sp"
+                android:layout_width="30sp"
+                android:layout_height="30sp" />
+
+            <TextView
+                android:text="我的捐款"
+                android:padding="1sp"
+                android:textSize="20sp"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="29dp">
+
+            <ImageView
+                android:layout_margin="2sp"
+                android:layout_width="30sp"
+                android:layout_height="30sp" />
+
+            <TextView
+                android:text="我的捐物"
+                android:padding="1sp"
+                android:textSize="20sp"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="29dp">
+
+            <ImageView
+                android:layout_margin="2sp"
+                android:layout_width="30sp"
+                android:layout_height="30sp" />
+
+            <TextView
+                android:text="帮助与反馈"
                 android:padding="1sp"
                 android:textSize="20sp"
                 android:layout_width="200sp"

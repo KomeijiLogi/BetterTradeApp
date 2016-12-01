@@ -45,7 +45,7 @@ public class CustomViewfinderView extends ViewfinderView {
         int height = canvas.getHeight();
         //绘制4个角
 
-        paint.setColor(0xFFFFFFFF);//定义画笔的颜色
+        paint.setColor(0xFF16E69D);//定义画笔的颜色
         canvas.drawRect(frame.left, frame.top, frame.left+70, frame.top+10, paint);
         canvas.drawRect(frame.left, frame.top, frame.left + 10, frame.top + 70, paint);
 

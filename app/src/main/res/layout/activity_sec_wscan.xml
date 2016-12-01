@@ -6,9 +6,11 @@
     android:orientation="vertical">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="打开闪关灯"
+        android:background="#fff"
         android:id="@+id/btn_switch"
         android:layout_alignTop="@+id/btn_hint1"
         />

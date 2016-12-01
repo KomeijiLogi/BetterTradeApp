@@ -31,8 +31,5 @@ public class TabDataPaperAdapter extends FragmentPagerAdapter {
         return fragmentsData.get(i);
     }
 
-    @Override
-    public boolean isViewFromObject(View view, Object o) {
-        return false;
-    }
+
 }

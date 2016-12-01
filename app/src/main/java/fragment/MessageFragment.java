@@ -31,6 +31,6 @@ public class MessageFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        //getActivity().findViewById(R.id.inclue_title).setVisibility(View.INVISIBLE);
+
     }
 }

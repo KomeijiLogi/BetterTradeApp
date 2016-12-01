@@ -32,4 +32,6 @@ dependencies {
     compile project(':PullToRefresh')
     compile files('libs/core-3.2.0.jar')
     compile 'com.journeyapps:zxing-android-embedded:3.3.0'
+    compile files('libs/ShareSDK-Wechat-Core-2.7.10.jar')
+    compile 'com.android.support:support-v13:25.0.1'
 }

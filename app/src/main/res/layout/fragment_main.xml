@@ -4,7 +4,9 @@
     android:layout_height="match_parent"
     tools:context="fragment.MainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
+    <include layout="@layout/layout_for_main_title"
+    android:id="@+id/inclue_title"
+    android:layout_height="40sp"
+    android:layout_width="match_parent" />
 
 </FrameLayout>

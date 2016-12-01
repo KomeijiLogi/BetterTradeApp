@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -45,8 +46,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RadioButton img_bt_mine;
     private RadioButton img_bt_addon;
     private RadioGroup ragp_bottom;
-    private ImageButton img_bt_ewscan;
-    private ImageButton img_bt_itemlist;
     ActionBar ab;
     MoreWindows mMoreWindow;
     ViewPager viewPager;
@@ -76,8 +75,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        img_bt_ewscan= (ImageButton) v.findViewById(R.id.img_secw);
 //        img_bt_itemlist= (ImageButton) v.findViewById(R.id.settings_title);
 
-        img_bt_ewscan= (ImageButton) findViewById(R.id.img_secw);
-        img_bt_itemlist= (ImageButton) findViewById(R.id.settings_title);
 
         img_bt_mainpage.setChecked(true);
 
@@ -98,10 +95,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+
+
         fm=getSupportFragmentManager();
         TabDataPaperAdapter tabDataPaperAdapter=new TabDataPaperAdapter(fm,fragmentList);
         viewPager.setAdapter(tabDataPaperAdapter);
-        viewPager.setCurrentItem(0);
+        //viewPager.setOffscreenPageLimit(4);
+        //viewPager.setCurrentItem(0);
 
 
 
@@ -113,24 +113,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         img_bt_mainpage.setOnClickListener(this);
         img_bt_message.setOnClickListener(this);
         img_bt_mine.setOnClickListener(this);
-        img_bt_ewscan.setOnClickListener(this);
-        img_bt_itemlist.setOnClickListener(this);
 
 
 
-//        img_bt_addon.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                  showMoreWindow(view);
-//            }
-//        });
-//        img_bt_mine.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent it =new Intent(MainActivity.this,MinePage.class);
-//                startActivity(it);
-//            }
-//        });
+
 
 
 
@@ -138,19 +124,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         tabDataPaperAdapter.notifyDataSetChanged();
 
-        img_bt_ewscan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               IntentIntegrator intentIntegrator = new IntentIntegrator(MainActivity.this);
-               intentIntegrator
-                        .setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES)
-                        .setPrompt("将二维码/条码放入框内，即可自动扫描")//写那句提示的话
-                        .setOrientationLocked(false)//扫描方向固定
-                        .setCaptureActivity(SecWScan.class) // 设置自定义的activity是CustomActivity
-                        .initiateScan(); // 初始化扫描
-
-            }
-        });
+//        img_bt_ewscan.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//               IntentIntegrator intentIntegrator = new IntentIntegrator(MainActivity.this);
+//               intentIntegrator
+//                        .setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES)
+//                        .setPrompt("将二维码/条码放入框内，即可自动扫描")//写那句提示的话
+//                        .setOrientationLocked(false)//扫描方向固定
+//                        .setCaptureActivity(SecWScan.class) // 设置自定义的activity是CustomActivity
+//                        .initiateScan(); // 初始化扫描
+//
+//            }
+//        });
         
     }
     private void showMoreWindow(View view) {
@@ -169,26 +155,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 viewPager.setCurrentItem(i);
-//                Intent it;
-//                switch (i){
-//                    case 0:
-//                        break;
-//                    case 1:
-//                        it=new Intent(MainActivity.this,DynamicPage.class);
-//                        startActivity(it);
-//                        break;
-//                    case 2:
-//                    case 3:
-//                        it=new Intent(MainActivity.this,MessagePage.class);
-//                        startActivity(it);
-//                        break;
-//                    case 4:
-//                        it=new Intent(MainActivity.this,MinePage.class);
-//                        startActivity(it);
-//                        break;
-//                    default:
-//                        break;
-//                }
+
             }
         });
 
@@ -215,6 +182,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        //底部按钮的点击切换事件
         switch (view.getId()){
             case R.id.imgbt_addon:
                 showMoreWindow(view);
@@ -231,45 +199,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.imgbt_mine:
                 viewPager.setCurrentItem(3);
                 break;
-            case R.id.img_secw:
-
-
-//                IntentIntegrator intentIntegrator = new IntentIntegrator(MainActivity.this);
-//                intentIntegrator
-//                        .setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES)
-//                        .setPrompt("将二维码/条码放入框内，即可自动扫描")//写那句提示的话
-//                        .setOrientationLocked(false)//扫描方向固定
-//                        .setCaptureActivity(SecWScan.class) // 设置自定义的activity是CustomActivity
-//                        .initiateScan(); // 初始化扫描
-
-
-
-
-                break;
-            case R.id.settings_title:
-                break;
             default:
                 break;
         }
     }
 
-//      private void initEvent() {
-//          img_bt_ewscan.setOnClickListener(new View.OnClickListener() {
-//              @Override
-//              public void onClick(View v) {
-//                  //假如你要用的是fragment进行界面的跳转
-//                  //IntentIntegrator intentIntegrator = IntentIntegrator.forSupportFragment(ShopFragment.this).setCaptureActivity(CustomScanAct.class);
-//                  IntentIntegrator intentIntegrator = new IntentIntegrator(MainActivity.this);
-//                  intentIntegrator
-//                          .setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES)
-//                          .setPrompt("将二维码/条码放入框内，即可自动扫描")//写那句提示的话
-//                          .setOrientationLocked(false)//扫描方向固定
-//                          .setCaptureActivity(CustomScanAct.class) // 设置自定义的activity是CustomActivity
-//                          .initiateScan(); // 初始化扫描
-//              }
-//          });
-//      }
-//
+
+
+
     //获取扫描结果
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
